@@ -1,0 +1,17 @@
+.wrapper {
+  margin: 10px
+}
+
+.error {
+  &__title {
+    color: red;
+    font-size: 10px;
+  }
+}
+
+.category {
+  display: block;
+  font-size: .92857143em;
+  font-weight: 700;
+  margin-bottom: 4px;
+}

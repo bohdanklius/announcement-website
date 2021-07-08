@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  width: 100vw;
+  background-color: rgb(145, 140, 140);
+
+  &__button {
+    padding: 10px;
+    border: 0;
+    background-color: transparent;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #363636;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      color: #1f1d1d;
+      background-color: #949494;
+      border-radius: 10px;
+    }
+  }
+}
