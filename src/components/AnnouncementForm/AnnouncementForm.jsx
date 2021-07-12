@@ -3,24 +3,21 @@ import React, { useEffect, useState } from 'react';
 import {
   Button,
   Form,
-  Input,
+  Input
 } from 'semantic-ui-react';
+import { v4 as uuidv4 } from 'uuid';
 import { editAnnouncementAPI, setAnnouncementsAPI } from '../../api';
 import { ANNOUNCEMENT, DASHBOARD } from '../../variables';
 import './AnnouncementForm.scss';
 
 export const AnnouncementForm = ({ setAnnouncements, editedAnnouncement, setNavigationActive }) => {
   const [newAnnouncement, setNewAnnouncement] = useState(ANNOUNCEMENT);
-
   useEffect(() => {
-    if (editedAnnouncement.length) {
+    if (editedAnnouncement) {
       setNewAnnouncement({ ...newAnnouncement, ...editedAnnouncement });
+    } else {
+      setNewAnnouncement({ ...newAnnouncement, id: uuidv4() });
     }
-    
-    if (!editedAnnouncement.length) {
-      setNewAnnouncement({ ...newAnnouncement, id: Date.now() });
-    }
-
   }, []);
 
   const [hasError, setHasError] = useState({
@@ -28,6 +25,7 @@ export const AnnouncementForm = ({ setAnnouncements, editedAnnouncement, setNavi
     announcementDescription: false,
     date: false,
   });
+
 
   const handleChange = (event) => {
     const { value, name } = event.target;
@@ -70,6 +68,8 @@ export const AnnouncementForm = ({ setAnnouncements, editedAnnouncement, setNavi
       setNavigationActive(DASHBOARD);
     }
   };
+
+
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group widths="equal">
@@ -131,7 +131,7 @@ export const AnnouncementForm = ({ setAnnouncements, editedAnnouncement, setNavi
 AnnouncementForm.propTypes = {
   setAnnouncements: PropTypes.func.isRequired,
   editedAnnouncement: PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number,]),
     announcementTitle: PropTypes.string,
     announcementDescription: PropTypes.string,
     date: PropTypes.string,

@@ -4,7 +4,7 @@ import {
   Form,
   Input
 } from 'semantic-ui-react';
-import { ANNOUNCEMENT, ANNOUNCEMENTFORM, DASHBOARD } from '../../variables';
+import { ANNOUNCEMENTFORM, DASHBOARD } from '../../variables';
 import './Header.scss';
 const navigation = [
   { id: 1, title: 'Announcement' },
@@ -27,7 +27,7 @@ export const Header = ({ setNavigationActive, setEditedAnnouncement, query, setQ
             } else {
               setNavigationActive(ANNOUNCEMENTFORM);
             }
-            setEditedAnnouncement(ANNOUNCEMENT);
+            setEditedAnnouncement(null)
           }}
           className="header__button"
           key={id}

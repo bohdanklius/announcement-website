@@ -2,17 +2,15 @@
   "announcements": [
     {
       "id": 1625773458164,
-      "announcementTitle": "Продаю Свиней",
-      "announcemeDescription": "",
-      "date": "2021-07-09",
-      "announcementDescription": "Продам свиней живым весом, свинкам пол года вес от 100 до 130 кг (+ -). 06******77"
+      "announcementTitle": "Продам Свиней",
+      "announcementDescription": "Продам свиней живым весом, свинкам пол года вес от 100 до 130 кг (+ -). 06******77",
+      "date": "2021-07-09"
     },
     {
-      "id": 1625783067992,
-      "announcementTitle": "bmx",
-      "announcemeDescription": "",
-      "date": "2021-07-07",
-      "announcementDescription": "BMX"
+      "id": "5395dedf-0ecd-4728-9ce7-c97509a3c5e9",
+      "announcementTitle": "Tesla Model Y",
+      "announcementDescription": "Компанія Tesla представила найдоступнішу версію свого кросовера Model Y для китайського ринку, знизити ціну якої вдалося за рахунок місцевого виробництва і державних субсидій.",
+      "date": "2021-07-11"
     }
   ]
 }

@@ -7,12 +7,12 @@ import { DASHBOARD, ANNOUNCEMENTFORM } from './variables';
 function App() {
   const [announcements, setAnnouncements] = useState([]);
   const [navigationActive, setNavigationActive] = useState(DASHBOARD);
-  const [editedAnnouncement, setEditedAnnouncement] = useState({
+  const [editedAnnouncement, setEditedAnnouncement] = useState(/* {
     id: Date.now(),
     date: '',
     announcementTitle: '',
     announcementDescription: '',
-  });
+  } */);
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
@@ -28,7 +28,6 @@ function App() {
   const handleRemove = (announcementId) => {
     setAnnouncements(announcements.filter((announcement) => announcement.id !== announcementId));
   };
-
   return (
     <div>
       <Header

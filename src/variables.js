@@ -6,7 +6,7 @@ const ANNOUNCEMENTFORM = 'ANNOUNCEMENTFORM';
 const ANNOUNCEMENT = {
   id: uuidv4(),
   announcementTitle: '',
-  announcemeDescription: '',
+  announcementDescription: '',
   date: '',
 };
 
