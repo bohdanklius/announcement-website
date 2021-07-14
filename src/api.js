@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-const API = 'http://localhost:3004/announcements';
+const API = 'https://announcement-website.herokuapp.com/api';
 
 async function setAnnouncementsAPI(data = {}) {
   const response = await fetch(API, {
