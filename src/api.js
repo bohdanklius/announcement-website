@@ -4,15 +4,15 @@ const API = 'https://announcement-website.herokuapp.com/api';
 async function setAnnouncementsAPI(data = {}) {
   const response = await fetch(API, {
     method: 'POST',
-    mode: 'cors',
-    cache: 'no-cache',
-    credentials: 'same-origin',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    redirect: 'follow',
-    referrerPolicy: 'no-referrer',
-    body: JSON.stringify(data),
+    // mode: 'cors',
+    // cache: 'no-cache',
+    // credentials: 'same-origin',
+    // headers: {
+    //   'Content-Type': 'application/json',
+    // },
+    // redirect: 'follow',
+    // referrerPolicy: 'no-referrer',
+    // body: JSON.stringify(data),
   });
   return response.json();
 }
