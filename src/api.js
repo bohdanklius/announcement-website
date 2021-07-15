@@ -1,18 +1,18 @@
 /* eslint-disable import/prefer-default-export */
-const API = 'https://announcement-website.herokuapp.com/api';
+const API = 'http://localhost:3004/announcements';
 
 async function setAnnouncementsAPI(data = {}) {
   const response = await fetch(API, {
     method: 'POST',
-    // mode: 'cors',
-    // cache: 'no-cache',
-    // credentials: 'same-origin',
-    // headers: {
-    //   'Content-Type': 'application/json',
-    // },
-    // redirect: 'follow',
-    // referrerPolicy: 'no-referrer',
-    // body: JSON.stringify(data),
+    mode: 'cors',
+    cache: 'no-cache',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    redirect: 'follow',
+    referrerPolicy: 'no-referrer',
+    body: JSON.stringify(data),
   });
   return response.json();
 }
